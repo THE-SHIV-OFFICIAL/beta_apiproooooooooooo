@@ -1,0 +1,52 @@
+# ── Secrets — KABHI commit mat karo ──────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Database ──────────────────────────────────────────────────────────────────
+*.db
+*.db-wal
+*.db-shm
+bot_data.db
+data/
+
+# ── betaapi.py — is mein key aa sakti hai, distribute karo lekin commit mat ──
+# (project mein rakho, but .gitignore se hatao agar intentionally commit karna ho)
+# betaapi.py   ← uncomment karo agar users ko auto-distribute nahi karna
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pycache
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Cookie files — contain session tokens, never commit ──────────────────────
+*.cookies
+cookies/
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Build / dist ──────────────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/

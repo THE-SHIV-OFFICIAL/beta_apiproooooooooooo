@@ -1,0 +1,53 @@
+{
+  "name": "BetaAPI",
+  "description": "YouTube stream API with Telegram key-management bot",
+  "keywords": [
+    "python",
+    "fastapi",
+    "youtube",
+    "telegram",
+    "api"
+  ],
+  "repository": "https://github.com/TEAM-ISTKHAR/Api",
+  "stack": "heroku-24",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "env": {
+    "APP_NAME": {
+      "description": "Name shown in the API response and Telegram bot",
+      "value": "BetaAPI"
+    },
+    "APP_URL": {
+      "description": "Public URL of the deployed API",
+      "required": true
+    },
+    "ADMIN_KEY": {
+      "description": "Long random key for /admin/* endpoints",
+      "required": true
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Bot token from BotFather",
+      "required": true
+    },
+    "ADMIN_IDS": {
+      "description": "Comma-separated Telegram user IDs allowed to use admin commands",
+      "required": true
+    },
+    "API_BASE_URL": {
+      "description": "API URL used by the Telegram worker",
+      "required": true
+    },
+    "DB_PATH": {
+      "description": "SQLite path; Heroku storage is ephemeral",
+      "value": "bot_data.db"
+    },
+    "WORKERS": {
+      "description": "Uvicorn worker count; keep at 1 for SQLite",
+      "value": "1"
+    }
+  }
+}
